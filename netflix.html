@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Netflix Logo</title>
+</head>
+<body>
+<h1>Netflix</h1>
+<div class="sticks">
+  <div class="stick"></div>
+  <div class="stick"></div>
+  <div class="stick"></div>
+</div>
+<script>
+var sticks = document.querySelectorAll(".stick");
+
+for (var i = 0; i < sticks.length; i++) {
+  sticks[i].style.animation = "stick 1s linear infinite";
+}
+
+function stick() {
+  this.classList.toggle("slow");
+}
+
+@keyframes stick {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.1);
+  }
+}
+</script>
+</body>
+</html>
